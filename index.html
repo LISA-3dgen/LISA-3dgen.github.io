@@ -110,8 +110,8 @@
                             <div class="buttons is-centered" style="height: 100%">
                                 <button class="button" id="style_button_0" style="font-weight: 500; background-color: #6f67bd; color: #f7f4f4">Environment 1</button>
                                 <button class="button" id="style_button_1" style="font-weight: 500; background-color: #89d88d; color: #0a0a0a">Environment 2</button>
-                                <button class="button" id="style_button_2" style="font-weight: 500; background-color: #3c5539; color: #f5efef">Environment 3</button>
-                                <button class="button" id="style_button_3" style="font-weight: 500; background-color: #515241; color: #f8f7f7">Environment 4</button>
+                                <button class="button" id="style_button_2" style="font-weight: 500; background-color: #4fdbee; color: #020202">Environment 3</button>
+                                <button class="button" id="style_button_3" style="font-weight: 500; background-color: #f5d93e; color: #020202">Environment 4</button>
                             </div>
                         </div>
                         <div class="column" style="background-color: #f5f5f5; margin-left: -5px;">
@@ -182,6 +182,35 @@
             </div>
         </div>
     </section>
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3"><center>Comparison to Other Methods</center></h2>
+          <div class="content has-text-justified">
+            <p>
+                Our pipeline generates 3D assets and multi-view images simultaneously; therefore, we feed the generated multi-view images to LGM and LaRa to reconstruct the meshes for comparison.
+            </p>
+        </div>
+            <div class="columns is-1 is-multiline is-mobile">
+              <div class="column pb-0 mb-0 is-one-fourth" style="text-align:center;">
+                  <strong>Ours</strong>
+              </div>
+              <div class="column pb-0 mb-0 is-one-fourth" style="text-align:center;">
+                  LGM
+              </div>
+              <div class="column pb-0 mb-0 is-one-fourth" style="text-align:center;">
+                  LaRa
+              </div>
+              <br/>
+              <br/>
+            </div>
+          <div class="hero-body">
+            <video id="teaser" autoplay muted loop playsinline height="100%">
+              <source src="./videos/comp.mp4"
+                      type="video/mp4">
+            </video>
+        </div>
+      </section>
   
     <section class="hero teaser">
         <div class="container is-max-desktop">
@@ -534,6 +563,7 @@
 
                 controls = new OrbitControls(camera, renderer.domElement)
                 controls.enableDamping = false
+                controls.enableZoom = false;
 
 
                 // resize
